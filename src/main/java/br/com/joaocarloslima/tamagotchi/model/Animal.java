@@ -19,4 +19,36 @@ public abstract class Animal {
 
     public abstract void turno();
 
+    protected void valida(){
+        if (energia < 0){
+            energia = 0;
+        }
+        if (fome < 0){
+            fome = 0;
+        }
+        if (felicidade < 0){
+            felicidade = 0;
+        }
+        if (energia > 100){
+            energia = 100;
+        }
+        if (fome > 100){
+            fome = 100;
+        }
+        if(felicidade > 100){
+            felicidade = 100;
+        }
+    }
+
+    public int getEnergia() {
+        return energia;
+    }
+
+    public int getFome() {
+        return fome;
+    }
+
+    public int getFelicidade() {
+        return felicidade;
+    }
 }
